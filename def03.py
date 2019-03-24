@@ -9,7 +9,7 @@ def def03():
     result=''
 
     if response:
-        data=str(response.read())
+        data=response.read().decode("utf-8")
         print(''.join([x[3] for x in re.findall("(?<![A-Z])[A-Z]{3}[a-z][A-Z]{3}(?![A-Z])", data)]))
 
 
